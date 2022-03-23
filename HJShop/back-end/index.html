@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Multikart admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Multikart admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="../LOGO/boss1.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="../LOGO/boss1.jpg" type="image/x-icon">
+    <title>HJShopMall購物商城後台-商品列表</title>
+
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/fontawesome.css">
+
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/flag-icon.css">
+
+    <!-- jsgrid css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/jsgrid.css">
+
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
+
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/admin.css">
+</head>
+
+<body>
+
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper">
+
+        <!-- Page Header Start-->
+        <div class="page-main-header">
+            <div class="main-header-right row">
+                <div class="main-header-left d-lg-none w-auto">
+                    <div class="logo-wrapper">
+                        <a href="index.html"><img class="blur-up lazyloaded" src="../LOGO/豆漿的LOGO02.png" height="150%"
+                                width="150%" alt=""></a>
+                    </div>
+                </div>
+                <div class="mobile-sidebar w-auto">
+                    <div class="media-body text-end switch-sm">
+                        <label class="switch"><a href="#"><i id="sidebar-toggle"
+                                    data-feather="align-left"></i></a></label>
+                    </div>
+                </div>
+                <div class="nav-right col">
+                    <ul class="nav-menus">
+                        <li>
+                            <form class="form-inline search-form">
+                                <div class="form-group">
+                                    <input class="form-control-plaintext" type="search" placeholder="Search.."><span
+                                        class="d-sm-none mobile-search"><i data-feather="search"></i></span>
+                                </div>
+                            </form>
+                        </li>
+                        <li><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i
+                                    data-feather="maximize-2"></i></a></li>
+                        <li class="onhover-dropdown"><a class="txt-dark" href="#">
+                                <h6>語言</h6>
+                            </a>
+                            <ul class="language-dropdown onhover-show-div p-20">
+                                <li><a href="#" data-lng="en"><i class="flag-icon flag-icon-is"></i> 英文</a></li>
+                                <li><a href="#" data-lng="es"><i class="flag-icon flag-icon-um"></i></a></li>
+                                <li><a href="#" data-lng="pt"><i class="flag-icon flag-icon-uy"></i></a></li>
+                                <li><a href="#" data-lng="fr"><i class="flag-icon flag-icon-nz"></i></a></li>
+                            </ul>
+                        </li>
+                        <li class="onhover-dropdown"><i data-feather="bell"></i><span
+                                class="badge badge-pill badge-primary pull-right notification-badge">3</span><span
+                                class="dot"></span>
+                            <ul class="notification-dropdown onhover-show-div p-0">
+                                <li>通知<span class="badge badge-pill badge-primary pull-right">3</span></li>
+                                <li>
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <h6 class="mt-0"><span><i class="shopping-color"
+                                                        data-feather="shopping-bag"></i></span>您的訂單已準備完畢！</h6>
+                                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetuer.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 txt-success"><span><i class="download-color font-success"
+                                                        data-feather="download"></i></span>下載完畢！</h6>
+                                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetuer.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 txt-danger"><span><i class="alert-color font-danger"
+                                                        data-feather="alert-circle"></i></span>提示！</h6>
+                                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetuer.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="txt-dark"><a href="#">所有通知</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="right_side_toggle" data-feather="message-square"></i><span
+                                    class="dot"></span></a></li>
+                        <li class="onhover-dropdown">
+                            <div class="media align-items-center"><img
+                                    class="align-self-center pull-right img-50 rounded-circle blur-up lazyloaded"
+                                    src="../assets/images/dashboard/man.png" alt="header-user">
+                                <div class="dotted-animation"><span class="animate-circle"></span><span
+                                        class="main-circle"></span></div>
+                            </div>
+                            <ul class="profile-dropdown onhover-show-div p-20 profile-dropdown-hover">
+                                <li><a href="#"><i data-feather="user"></i>編輯個人信箱</a></li>
+                                <li><a href="#"><i data-feather="mail"></i>信箱</a></li>
+                                <li><a href="#"><i data-feather="lock"></i>鎖住屏幕</a></li>
+                                <li><a href="#"><i data-feather="settings"></i>設定</a></li>
+                                <li><a href="#"><i data-feather="log-out"></i>登出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="d-lg-none mobile-toggle pull-right"><i data-feather="more-horizontal"></i></div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Ends -->
+
+        <!-- Page Body Start-->
+        <div class="page-body-wrapper">
+
+            <!-- Page Sidebar Start-->
+            <div class="page-sidebar">
+                <div class="main-header-left d-none d-lg-block">
+                    <div class="logo-wrapper"><a href="index.html"><img class="blur-up lazyloaded"
+                                src="../LOGO/豆漿的LOGO01.jpg" height="30%" width="60%" alt=""></a></div>
+                </div>
+                <div class="sidebar custom-scrollbar">
+                    <div class="sidebar-user text-center">
+                        <div><img class="img-60 rounded-circle lazyloaded blur-up"
+                                src="../assets/images/dashboard/man.png" alt="#">
+                        </div>
+                        <h6 class="mt-3 f-14">管理者</h6>
+                        <p>管理層面</p>
+                    </div>
+                    <ul class="sidebar-menu">
+                        <!--
+                        <li><a class="sidebar-header" href="index.html"><i data-feather="home"></i><span>管理頁面</span></a>
+                        </li>
+                        -->
+                        <li><a class="sidebar-header" href="#"><i data-feather="box"></i> <span>商品</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <!--
+                                    <li><a href="category.html"><i class="fa fa-circle"></i></a></li>
+                                    -->
+                                <li><a href="index.html"><i class="fa fa-circle"></i>全部商品</a></li>
+                                <!--
+                                <li><a href="product-list.html"><i class="fa fa-circle"></i>產品列表</a></li>
+                                <li><a href="product-detail.html"><i class="fa fa-circle"></i>產品信息</a></li>
+                                -->
+                                <li><a href="add-product.html"><i class="fa fa-circle"></i>新增商品</a></li>
+                                <!--
+                            <li>
+                                <a href="#"><i class="fa fa-circle"></i>
+                                    <span>Digital</span> <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="category-digital.html"><i class="fa fa-circle"></i>Category</a></li>
+                                    <li><a href="category-digitalsub.html"><i class="fa fa-circle"></i>Sub Category</a></li>
+                                    <li><a href="index.html"><i class="fa fa-circle"></i>Product List</a></li>
+                                    <li><a href="add-digital-product.html"><i class="fa fa-circle"></i>Add Product</a></li>
+                                </ul>
+                            </li>
+                            -->
+                            </ul>
+                        </li>
+                        <!--
+                        <li><a class="sidebar-header" href=""><i data-feather="dollar-sign"></i><span>訂單管理</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="order.html"><i class="fa fa-circle"></i>訂單查詢</a></li>
+                                <li><a href="transactions.html"><i class="fa fa-circle"></i>成立訂單明細</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-header" href=""><i data-feather="tag"></i><span>優惠卷</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="coupon-list.html"><i class="fa fa-circle"></i>列出優惠卷</a></li>
+                                <li><a href="coupon-create.html"><i class="fa fa-circle"></i>創建優惠卷</a></li>
+                            </ul>
+                        </li>
+                    -->
+                        <!--
+                    <li><a class="sidebar-header" href="#"><i data-feather="clipboard"></i><span>頁面</span><i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="sidebar-submenu">
+                            <li><a href="pages-list.html"><i class="fa fa-circle"></i>目前分類</a></li>
+                            <li><a href="page-create.html"><i class="fa fa-circle"></i>創建新分類</a></li>
+                        </ul>
+                    </li>
+                    -->
+                        <!-- <li><a class="sidebar-header" href="media.html"><i
+                                    data-feather="camera"></i><span>上傳照片</span></a></li>
+                        <li><a class="sidebar-header" href="#"><i data-feather="align-left"></i><span>列表</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="menu-list.html"><i class="fa fa-circle"></i>列表查詢</a></li>
+                                <li><a href="create-menu.html"><i class="fa fa-circle"></i>創建列表</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-header" href=""><i data-feather="user-plus"></i><span>用戶</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="user-list.html"><i class="fa fa-circle"></i>用戶清單</a></li>
+                                <li><a href="create-user.html"><i class="fa fa-circle"></i>新增用戶</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-header" href=""><i data-feather="users"></i><span>供應商</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="list-vendor.html"><i class="fa fa-circle"></i>供應商名單</a></li>
+                                <li><a href="create-vendors.html"><i class="fa fa-circle"></i>創建供應商</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-header" href=""><i data-feather="chrome"></i><span>小工具</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="translations.html"><i class="fa fa-circle"></i>翻譯</a></li>
+                                <li><a href="currency-rates.html"><i class="fa fa-circle"></i>貨幣即時匯率</a></li>
+                                <li><a href="taxes.html"><i class="fa fa-circle"></i>稅務</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-header" href="reports.html"><i
+                                    data-feather="bar-chart"></i><span>報告</span></a></li>
+                        <li><a class="sidebar-header" href=""><i data-feather="settings"></i><span>設定</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="profile.html"><i class="fa fa-circle"></i>輪廓</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-header" href="invoice.html"><i
+                                    data-feather="archive"></i><span>發票</span></a>
+                        </li>
+                        <li><a class="sidebar-header" href="login.html"><i data-feather="log-in"></i><span>登入</span></a>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+            <!-- Page Sidebar Ends-->
+
+            <!-- Right sidebar Start-->
+            <div class="right-sidebar" id="right_side_bar">
+                <div>
+                    <div class="container p-0">
+                        <div class="modal-header p-l-20 p-r-20">
+                            <div class="col-sm-8 p-0">
+                                <h6 class="modal-title font-weight-bold">客戶名單</h6>
+                            </div>
+                            <div class="col-sm-4 text-end p-0"><i class="me-2" data-feather="settings"></i></div>
+                        </div>
+                    </div>
+                    <div class="friend-list-search mt-0">
+                        <input type="text" placeholder="搜尋客戶"><i class="fa fa-search"></i>
+                    </div>
+                    <div class="p-l-30 p-r-30">
+                        <div class="chat-box">
+                            <div class="people-list friend-list">
+                                <ul class="list">
+                                    <li class="clearfix"><img class="rounded-circle user-image"
+                                            src="../assets/images/dashboard/user.png" alt="">
+                                        <div class="status-circle online"></div>
+                                        <div class="about">
+                                            <div class="name">客戶名稱</div>
+                                            <div class="status"> 上線中</div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix"><img class="rounded-circle user-image"
+                                            src="../assets/images/dashboard/user1.jpg" alt="">
+                                        <div class="status-circle away"></div>
+                                        <div class="about">
+                                            <div class="name">客戶名稱</div>
+                                            <div class="status">幾分鐘前上線</div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix"><img class="rounded-circle user-image"
+                                            src="../assets/images/dashboard/user2.jpg" alt="">
+                                        <div class="status-circle online"></div>
+                                        <div class="about">
+                                            <div class="name">客戶名稱</div>
+                                            <div class="status">上線中</div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix"><img class="rounded-circle user-image"
+                                            src="../assets/images/dashboard/user3.jpg" alt="">
+                                        <div class="status-circle online"></div>
+                                        <div class="about">
+                                            <div class="name">客戶名稱</div>
+                                            <div class="status">上線中</div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix"><img class="rounded-circle user-image"
+                                            src="../assets/images/dashboard/man.png" alt="">
+                                        <div class="status-circle offline"></div>
+                                        <div class="about">
+                                            <div class="name">客戶名稱</div>
+                                            <div class="status">2分鐘前上線</div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix"><img class="rounded-circle user-image"
+                                            src="../assets/images/dashboard/user5.jpg" alt="">
+                                        <div class="status-circle away"></div>
+                                        <div class="about">
+                                            <div class="name">客戶名稱</div>
+                                            <div class="status">幾分鐘前上線</div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix"><img class="rounded-circle user-image"
+                                            src="../assets/images/dashboard/designer.jpg" alt="">
+                                        <div class="status-circle online"></div>
+                                        <div class="about">
+                                            <div class="name">客戶名稱</div>
+                                            <div class="status">上線中</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right sidebar Ends-->
+
+            <div class="page-body">
+
+                <!-- Container-fluid starts-->
+                <div class="container-fluid">
+                    <div class="page-header">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="page-header-left">
+                                    <h3>產品列表
+                                        <small>HJShopMall購物商城後台</small>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <ol class="breadcrumb pull-right">
+                                    <li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item"></li>
+                                    <li class="breadcrumb-item active">全部產品列表</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Container-fluid Ends-->
+
+                <!-- Container-fluid starts-->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>商品</h5>
+                                </div>
+                                <div class="card-body">
+                                    <!--basicScenario 原本是插這個JS表單-->
+                                    <div class="product-physical table-responsive jsgrid"
+                                        style="position: relative; height: auto; width: 100%;">
+                                        <div class="jsgrid-grid-header jsgrid-header-scrollbar">
+                                            <table class="jsgrid-table">
+                                                <tbody>
+                                                    <tr class="jsgrid-header-row">
+                                                        <th class="jsgrid-header-cell jsgrid-header-sortable"
+                                                            style="width: 100px;">商品名稱</th>
+                                                        <th class="jsgrid-header-cell jsgrid-align-center jsgrid-header-sortable"
+                                                            style="width: 30px;">商品照片</th>
+                                                        <th class="jsgrid-header-cell jsgrid-header-sortable"
+                                                            style="width: 120px;">商品規格</th>
+                                                        <th class="jsgrid-header-cell jsgrid-align-right jsgrid-header-sortable"
+                                                            style="width: 50px;">商品金額</th>
+                                                        <th class="jsgrid-header-cell jsgrid-align-right jsgrid-header-sortable"
+                                                            style="width: 50px;">庫存數量</th>
+                                                        <th class="jsgrid-header-cell jsgrid-align-right jsgrid-header-sortable"
+                                                            style="width: 50px;">售出數量</th>
+                                                        <th class="jsgrid-header-cell jsgrid-control-field jsgrid-align-center"
+                                                            style="width: 50px;"></th>
+                                                    </tr>
+                                                    <tr class="jsgrid-filter-row" style="display: table-row;">
+                                                        <td class="jsgrid-cell" style="width: 100px;">
+                                                            <input type="text">
+                                                        </td>
+                                                        <td class="jsgrid-cell jsgrid-align-center"
+                                                            style="width: 50px;">
+                                                        </td>
+                                                        <td class="jsgrid-cell" style="width: 50px;">
+                                                            <input type="text">
+                                                        </td>
+                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">
+                                                            <input type="number">
+                                                        </td>
+                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">
+                                                            <input type="number">
+                                                        </td>
+                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">
+                                                            <input type="number">
+                                                        </td>
+                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="jsgrid-insert-row" style="display: none;">
+                                                        <td class="jsgrid-cell" style="width: 100px;">
+                                                        </td>
+                                                        <td class="jsgrid-cell jsgrid-align-center"
+                                                            style="width: 50px;">
+                                                        </td>
+                                                        <td class="jsgrid-cell" style="width: 50px;">
+                                                        </td>
+                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">
+                                                        </td>
+                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">
+                                                        </td>
+                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">
+                                                        </td>
+                                                        <td class="jsgrid-cell jsgrid-align-right" style="width: 50px;">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="jsgrid-grid-body">
+                                            <table class="jsgrid-table">
+                                                <tbody>
+                                                    <form action="./php/iDeltem.php" method="post">
+                                                        <tr class="jsgrid-row">
+                                                            <input type="text" id="item_id1" disabled
+                                                                style="border-style:none; width:max-content;" hidden>
+                                                            <td class="jsgrid-cell" style="width: 100px;">
+                                                                <input type="text" id="item_name1" disabled
+                                                                    style="border-style:none; width:max-content; ">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-center"
+                                                                style="width: 30px;">
+                                                                <img style="height: 50px; width: 50px;" id="pic1">
+                                                            </td>
+                                                            <td class="jsgrid-cell" style="width: 120px;">
+                                                                <input type="text" id="size1" disabled
+                                                                    style="border-style:none; width:max-content; ">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="price1"
+                                                                    style="width: 50px; border-style:none;" disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="layup1"
+                                                                    style="width: 50px; border-style:none;" disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input class="jsgrid-button jsgrid-edit-button"
+                                                                    type="button" title="Edit"
+                                                                    onclick="location.href='edit-product.html?id=1';">
+                                                                <input class="jsgrid-button jsgrid-delete-button"
+                                                                    id="DE1" type="button" title="Delete">
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="jsgrid-alt-row">
+                                                            <input type="text" id="item_id2" disabled
+                                                                style="border-style:none; width:max-content; " hidden>
+                                                            <td class="jsgrid-cell" style="width: 100px;">
+                                                                <input type="text" id="item_name2" disabled
+                                                                    style="border-style:none; width:max-content;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-center"
+                                                                style="width: 30px;">
+                                                                <img style="height: 50px; width: 50px;" id="pic2">
+                                                            </td>
+                                                            <td class="jsgrid-cell" style="width: 120px;">
+                                                                <input type="text" id="size2" disabled
+                                                                    style="border-style:none; width:max-content;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="price2"
+                                                                    style="width: 50px; border-style:none;" disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="layup2"
+                                                                    style="width: 50px; border-style:none;" disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input class="jsgrid-button jsgrid-edit-button"
+                                                                    type="button" title="Edit"
+                                                                    onclick="location.href='edit-product.html?id=2';">
+                                                                <input class="jsgrid-button jsgrid-delete-button"
+                                                                    id="DE2" type="button" title="Delete">
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="jsgrid-row">
+                                                            <input type="text" id="item_id3" disabled
+                                                                style="border-style:none; width:max-content; " hidden>
+                                                            <td class="jsgrid-cell" style="width: 100px;">
+                                                                <input type="text" id="item_name3" disabled
+                                                                    style="border-style:none; width:max-content;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-center"
+                                                                style="width: 30px;">
+                                                                <img style="height: 50px; width: 50px;" id="pic3">
+                                                            </td>
+                                                            <td class="jsgrid-cell" style="width: 120px;">
+                                                                <input type="text" id="size3" disabled
+                                                                    style="border-style:none; width:max-content;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="price3"
+                                                                    style="width: 50px; border-style:none;" disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="layup3"
+                                                                    style="width: 50px; border-style:none;" disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input class="jsgrid-button jsgrid-edit-button"
+                                                                    type="button" title="Edit"
+                                                                    onclick="location.href='edit-product.html?id=3';">
+                                                                <input class="jsgrid-button jsgrid-delete-button"
+                                                                    id="DE3" type="button" title="Delete">
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="jsgrid-alt-row">
+                                                            <input type="text" id="item_id4" disabled
+                                                                style="border-style:none; width:max-content; " hidden>
+                                                            <td class="jsgrid-cell" style="width: 100px;">
+                                                                <input type="text" id="item_name4" disabled
+                                                                    style="border-style:none; width:max-content;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-center"
+                                                                style="width: 30px;">
+                                                                <img style="height: 50px; width: 50px;" id="pic4">
+                                                            </td>
+                                                            <td class="jsgrid-cell" style="width: 120px;">
+                                                                <input type="text" id="size4" disabled
+                                                                    style="border-style:none; width:max-content;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="price4"
+                                                                    style="width: 50px; border-style:none;" disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="layup4"
+                                                                    style="width: 50px; border-style:none;" disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input class="jsgrid-button jsgrid-edit-button"
+                                                                    type="button" title="Edit"
+                                                                    onclick="location.href='edit-product.html?id=4';">
+                                                                <input class="jsgrid-button jsgrid-delete-button"
+                                                                    id="DE4" type="button" title="Delete">
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="jsgrid-row">
+                                                            <input type="text" id="item_id5" disabled
+                                                                style="border-style:none; width:max-content; " hidden>
+                                                            <td class="jsgrid-cell" style="width: 100px;">
+                                                                <input type="text" id="item_name5" disabled
+                                                                    style="border-style:none; width:max-content;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-center"
+                                                                style="width: 30px;">
+                                                                <img style="height: 50px; width: 50px;" id="pic5">
+                                                            </td>
+                                                            <td class="jsgrid-cell" style="width: 120px;">
+                                                                <input type="text" id="size5" disabled
+                                                                    style="border-style:none; width:max-content;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="price5"
+                                                                    style="width: 50px; border-style:none;" disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="layup5"
+                                                                    style="width: 50px; border-style:none;" disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input class="jsgrid-button jsgrid-edit-button"
+                                                                    type="button" title="Edit"
+                                                                    onclick="location.href='edit-product.html?id=5';">
+                                                                <input class="jsgrid-button jsgrid-delete-button"
+                                                                    id="DE5" type="button" title="Delete">
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="jsgrid-alt-row">
+                                                            <input type="text" id="item_id6" disabled
+                                                                style="border-style:none; width:max-content; " hidden>
+                                                            <td class="jsgrid-cell" style="width: 100px;">
+                                                                <input type="text" id="item_name6" disabled
+                                                                    style="border-style:none; width:max-content;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-center"
+                                                                style="width: 30px;">
+                                                                <img style="height: 50px; width: 50px;" id="pic6">
+                                                            </td>
+                                                            <td class="jsgrid-cell" style="width: 120px;">
+                                                                <input type="text" id="size6" disabled
+                                                                    style="border-style:none; width:max-content;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="price6"
+                                                                    style="width: 50px; border-style:none;" disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="layup6"
+                                                                    style="width: 50px; border-style:none;  " disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input class="jsgrid-button jsgrid-edit-button"
+                                                                    type="button" title="Edit"
+                                                                    onclick="location.href='edit-product.html?id=6';">
+                                                                <input class="jsgrid-button jsgrid-delete-button"
+                                                                    id="DE6" type="button" title="Delete">
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="jsgrid-row">
+                                                            <input type="text" id="item_id7" disabled
+                                                                style="border-style:none; width:max-content; " hidden>
+                                                            <td class="jsgrid-cell" style="width: 100px;">
+                                                                <input type="text" id="item_name7" disabled
+                                                                    style="border-style:none; width:max-content;  ">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-center"
+                                                                style="width: 30px;">
+                                                                <img style="height: 50px; width: 50px;" id="pic7">
+                                                            </td>
+                                                            <td class="jsgrid-cell" style="width: 120px;">
+                                                                <input type="text" id="size7" disabled
+                                                                    style="border-style:none; width:max-content;  ">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="price7"
+                                                                    style="width: 50px; border-style:none;  " disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="layup7"
+                                                                    style="width: 50px; border-style:none;  " disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input class="jsgrid-button jsgrid-edit-button"
+                                                                    type="button" title="Edit"
+                                                                    onclick="location.href='edit-product.html?id=7';">
+                                                                <input class="jsgrid-button jsgrid-delete-button"
+                                                                    id="DE7" type="button" title="Delete">
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="jsgrid-alt-row">
+                                                            <input type="text" id="item_id8" disabled
+                                                                style="border-style:none; width:max-content; " hidden>
+                                                            <td class="jsgrid-cell" style="width: 100px;">
+                                                                <input type="text" id="item_name8" disabled
+                                                                    style="border-style:none; width:max-content;  ">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-center"
+                                                                style="width: 30px;">
+                                                                <img style="height: 50px; width: 50px;" id="pic8">
+                                                            </td>
+                                                            <td class="jsgrid-cell" style="width: 120px;">
+                                                                <input type="text" id="size8" disabled
+                                                                    style="border-style:none; width:max-content;  ">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="price8"
+                                                                    style="width: 50px; border-style:none;  " disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="layup8"
+                                                                    style="width: 50px; border-style:none;  " disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input class="jsgrid-button jsgrid-edit-button"
+                                                                    type="button" title="Edit"
+                                                                    onclick="location.href='edit-product.html?id=8';">
+                                                                <input class="jsgrid-button jsgrid-delete-button"
+                                                                    id="DE8" type="button" title="Delete">
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="jsgrid-row">
+                                                            <input type="text" id="item_id9" disabled
+                                                                style="border-style:none; width:max-content; " hidden>
+                                                            <td class="jsgrid-cell" style="width: 100px;">
+                                                                <input type="text" id="item_name9" disabled
+                                                                    style="border-style:none; width:max-content;  ">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-center"
+                                                                style="width: 30px;">
+                                                                <img style="height: 50px; width: 50px;" id="pic9">
+                                                            </td>
+                                                            <td class="jsgrid-cell" style="width: 120px;">
+                                                                <input type="text" id="size9" disabled
+                                                                    style="border-style:none; width:max-content;  ">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="price9"
+                                                                    style="width: 50px; border-style:none;  " disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input type="number" id="layup9"
+                                                                    style="width: 50px; border-style:none;  " disabled>
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                            </td>
+                                                            <td class="jsgrid-cell jsgrid-align-right"
+                                                                style="width: 50px;">
+                                                                <input class="jsgrid-button jsgrid-edit-button"
+                                                                    type="button" title="Edit"
+                                                                    onclick="location.href='edit-product.html?id=9';">
+                                                                <input class="jsgrid-button jsgrid-delete-button"
+                                                                    id="DE9" type="button" title="Delete">
+                                                            </td>
+                                                        </tr>
+                                                    </form>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="jsgrid-pager-container" style="display: none;">
+                                            <div class="jsgrid-pager">Pages:
+                                                <span class="jsgrid-pager-nav-button jsgrid-pager-nav-inactive-button">
+                                                    <a href="javascript:void(0);">First</a></span>
+                                                <span class="jsgrid-pager-nav-button jsgrid-pager-nav-inactive-button">
+                                                    <a href="javascript:void(0);">Prev</a></span>
+                                                <span class="jsgrid-pager-page jsgrid-pager-current-page">1</span>
+                                                <span class="jsgrid-pager-nav-button jsgrid-pager-nav-inactive-button">
+                                                    <a href="javascript:void(0);">Next</a></span>
+                                                <span class="jsgrid-pager-nav-button jsgrid-pager-nav-inactive-button">
+                                                    <a href="javascript:void(0);">Last</a></span> &nbsp;&nbsp; 1 of 1
+                                            </div>
+                                        </div>
+                                        <div class="jsgrid-load-shader"
+                                            style="display: none; position: absolute; inset: 0px; z-index: 1000;">
+                                        </div>
+                                        <div class="jsgrid-load-panel"
+                                            style="display: none; position: absolute; top: 50%; left: 50%; z-index: 1000;">
+                                            Please, wait...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Container-fluid Ends-->
+
+            </div>
+
+            <!-- footer start-->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 footer-copyright">
+                            <p><i class="fa fa-copyright" aria-hidden="true"></i> 2022 HJShopMall商城-閎捷科技有限公司，保留所有權利！
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="pull-right mb-0"><i class="fa fa-heart"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer end-->
+            <button id="doe1"></button>
+        </div>
+
+    </div>
+
+    <!-- latest jquery-->
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- feather icon js-->
+    <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+
+    <!-- Sidebar jquery-->
+    <script src="../assets/js/sidebar-menu.js"></script>
+
+    <!-- Jsgrid js-->
+    <script src="../assets/js/jsgrid/jsgrid.min.js"></script>
+    <script src="../assets/js/jsgrid/griddata-productlist-digital.js"></script>
+    <script src="../assets/js/jsgrid/jsgrid-list.js"></script>
+
+    <!--Customizer admin-->
+    <script src="../assets/js/admin-customizer.js"></script>
+
+    <!-- lazyload js-->
+    <script src="../assets/js/lazysizes.min.js"></script>
+
+    <!--right sidebar js-->
+    <script src="../assets/js/chat-menu.js"></script>
+
+    <!--script admin-->
+    <script src="../assets/js/admin-script.js"></script>
+    <script>
+        $(function () {
+            load();
+        });
+
+        function load() {
+            //alert("進入Load Function");
+            $.ajax({
+                type: 'post',
+                url: '/HJShop/back-end/php/iLoaditem.php',
+                dataType: 'json',
+                data: {
+                    'id': 1
+                },
+                success: function (data) {
+                    //alert(JSON.stringify(data[0]));
+                    //var MyArray = data.split(',');
+                    console.log(JSON.stringify(data));
+                    //alert(data.length);
+                    //alert('item_name'+(0+1));
+                    //alert(data[0].item_name);
+                    //alert(data[0].pic1);
+                    for (i = 0; i < data.length; i++) {
+                        //alert(data.length);
+                        document.getElementById('item_id' + (i + 1)).value = data[i].item_id;
+                        document.getElementById('item_name' + (i + 1)).value = data[i].item_name;
+                        document.getElementById('pic' + (i + 1)).src = "../upload/item_pics/" + data[i].pic1;
+                        //document.getElementById('pic'+(i+1)).src=data[i].pic1;
+                        //data[i].pic1 = http://localhost:8080/inside/1838_3986_3444.jpg
+                        //inside/upload/shop_pics/1838_3986_3444.jpg
+                        document.getElementById('size' + (i + 1)).value = data[i].size;
+                        document.getElementById('price' + (i + 1)).value = data[i].price;
+                        document.getElementById('layup' + (i + 1)).value = data[i].layup;
+                        //alert(item_name1);
+                    }
+                },
+                error: function (data) {
+                    alert("you are bad")
+                }
+            });
+        }
+        $(document).ready(function () {
+            $('#DE1').click(function () {
+                $.ajax({
+                    type: 'post',
+                    url: '/HJShop/back-end/php/iDeltem.php',
+                    dataType: 'json',
+                    data: {
+                        'id': document.getElementById('item_id1').value
+                    },
+                    success: function (data) {
+                        alert("刪除商品資料成功!");
+                    },
+                    error: function (data) {
+                        alert("操作失敗");
+                    },
+                });
+                setTimeout("location.href='./index.html'", 2000);
+            })
+        });
+        $(document).ready(function () {
+            $('#DE2').click(function () {
+                $.ajax({
+                    type: 'post',
+                    url: '/HJShop/back-end/php/iDeltem.php',
+                    dataType: 'json',
+                    data: {
+                        'id': document.getElementById('item_id2').value
+                    },
+                    success: function (data) {
+                        alert("刪除商品資料成功!");
+                    },
+                    error: function (data) {
+                        alert("操作失敗");
+                    },
+                });
+                setTimeout("location.href='./index.html'", 2000);
+            })
+        });
+        $(document).ready(function () {
+            $('#DE3').click(function () {
+                $.ajax({
+                    type: 'post',
+                    url: '/HJShop/back-end/php/iDeltem.php',
+                    dataType: 'json',
+                    data: {
+                        'id': document.getElementById('item_id3').value
+                    },
+                    success: function (data) {
+                        alert("刪除商品資料成功!");
+                    },
+                    error: function (data) {
+                        alert("操作失敗");
+                    },
+                });
+                setTimeout("location.href='./index.html'", 2000);
+            })
+        });
+        $(document).ready(function () {
+            $('#DE4').click(function () {
+                $.ajax({
+                    type: 'post',
+                    url: '/HJShop/back-end/php/iDeltem.php',
+                    dataType: 'json',
+                    data: {
+                        'id': document.getElementById('item_id4').value
+                    },
+                    success: function (data) {
+                        alert("刪除商品資料成功!");
+                    },
+                    error: function (data) {
+                        alert("操作失敗");
+                    },
+                });
+                setTimeout("location.href='./index.html'", 2000);
+            })
+        });
+        $(document).ready(function () {
+            $('#DE5').click(function () {
+                $.ajax({
+                    type: 'post',
+                    url: '/HJShop/back-end/php/iDeltem.php',
+                    dataType: 'json',
+                    data: {
+                        'id': document.getElementById('item_id5').value
+                    },
+                    success: function (data) {
+                        alert("刪除商品資料成功!");
+                    },
+                    error: function (data) {
+                        alert("操作失敗");
+                    },
+                });
+                setTimeout("location.href='./index.html'", 2000);
+            })
+        });
+        $(document).ready(function () {
+            $('#DE6').click(function () {
+                $.ajax({
+                    type: 'post',
+                    url: '/HJShop/back-end/php/iDeltem.php',
+                    dataType: 'json',
+                    data: {
+                        'id': document.getElementById('item_id6').value
+                    },
+                    success: function (data) {
+                        alert("刪除商品資料成功!");
+                    },
+                    error: function (data) {
+                        alert("操作失敗");
+                    },
+                });
+                setTimeout("location.href='./index.html'", 2000);
+            })
+        });
+        $(document).ready(function () {
+            $('#DE7').click(function () {
+                $.ajax({
+                    type: 'post',
+                    url: '/HJShop/back-end/php/iDeltem.php',
+                    dataType: 'json',
+                    data: {
+                        'id': document.getElementById('item_id7').value
+                    },
+                    success: function (data) {
+                        alert("刪除商品資料成功!");
+                    },
+                    error: function (data) {
+                        alert("操作失敗");
+                    },
+                });
+                setTimeout("location.href='./index.html'", 2000);
+            })
+        });
+        $(document).ready(function () {
+            $('#DE8').click(function () {
+                $.ajax({
+                    type: 'post',
+                    url: '/HJShop/back-end/php/iDeltem.php',
+                    dataType: 'json',
+                    data: {
+                        'id': document.getElementById('item_id8').value
+                    },
+                    success: function (data) {
+                        alert("刪除商品資料成功!");
+                    },
+                    error: function (data) {
+                        alert("操作失敗");
+                    },
+                });
+                setTimeout("location.href='./index.html'", 2000);
+            })
+        });
+        $(document).ready(function () {
+            $('#DE9').click(function () {
+                $.ajax({
+                    type: 'post',
+                    url: '/HJShop/back-end/php/iDeltem.php',
+                    dataType: 'json',
+                    data: {
+                        'id': document.getElementById('item_id19').value
+                    },
+                    success: function (data) {
+                        alert("刪除商品資料成功!");
+                    },
+                    error: function (data) {
+                        alert("操作失敗");
+                    },
+                });
+                setTimeout("location.href='./index.html'", 2000);
+            })
+        });
+    </script>
+</body>
+
+</html>

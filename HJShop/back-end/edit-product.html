@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Multikart admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Multikart admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="../LOGO/boss1.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="../LOGO/boss1.jpg" type="image/x-icon">
+    <title>HJShopMall購物商城後台-編輯商品</title>
+
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/fontawesome.css">
+
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/flag-icon.css">
+
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
+
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/admin.css">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/update.css">
+</head>
+
+<body>
+
+
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper">
+
+        <!-- Page Header Start-->
+        <div class="page-main-header">
+            <div class="main-header-right row">
+                <div class="main-header-left d-lg-none w-auto">
+                    <div class="logo-wrapper">
+                        <a href="index.html"><img class="blur-up lazyloaded" src="../LOGO/豆漿的LOGO02.png" height="150%"
+                                width="150%" alt=""></a>
+                    </div>
+                </div>
+                <div class="mobile-sidebar w-auto">
+                    <div class="media-body text-end switch-sm">
+                        <label class="switch"><a href="#"><i id="sidebar-toggle"
+                                    data-feather="align-left"></i></a></label>
+                    </div>
+                </div>
+                <div class="nav-right col">
+                    <ul class="nav-menus">
+                        <li>
+                            <form class="form-inline search-form">
+                                <div class="form-group">
+                                    <input class="form-control-plaintext" type="search" placeholder="搜尋~">
+                                    <span class="d-sm-none mobile-search"><i data-feather="search"></i></span>
+                                </div>
+                            </form>
+                        </li>
+                        <li><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i
+                                    data-feather="maximize-2"></i></a></li>
+                        <li class="onhover-dropdown"><a class="txt-dark" href="#">
+                                <h6>語言</h6>
+                            </a>
+                            <ul class="language-dropdown onhover-show-div p-20">
+                                <li><a href="#" data-lng="en"><i class="flag-icon flag-icon-is"></i> 英文</a></li>
+                                <li><a href="#" data-lng="es"><i class="flag-icon flag-icon-um"></i></a></li>
+                                <li><a href="#" data-lng="pt"><i class="flag-icon flag-icon-uy"></i></a></li>
+                                <li><a href="#" data-lng="fr"><i class="flag-icon flag-icon-nz"></i></a></li>
+                            </ul>
+                        </li>
+                        <li class="onhover-dropdown"><i data-feather="bell"></i><span
+                                class="badge badge-pill badge-primary pull-right notification-badge">3</span><span
+                                class="dot"></span>
+                            <ul class="notification-dropdown onhover-show-div p-0">
+                                <li>通知<span class="badge badge-pill badge-primary pull-right">3</span></li>
+                                <li>
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <h6 class="mt-0"><span><i class="shopping-color"
+                                                        data-feather="shopping-bag"></i></span>您的訂單已準備完畢！</h6>
+                                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetuer.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 txt-success"><span><i class="download-color font-success"
+                                                        data-feather="download"></i></span>下載完畢！</h6>
+                                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetuer.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 txt-danger"><span><i class="alert-color font-danger"
+                                                        data-feather="alert-circle"></i></span>提示！</h6>
+                                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetuer.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="txt-dark"><a href="#">所有通知</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="right_side_toggle" data-feather="message-square"></i><span
+                                    class="dot"></span></a></li>
+                        <li class="onhover-dropdown">
+                            <div class="media align-items-center"><img
+                                    class="align-self-center pull-right img-50 rounded-circle blur-up lazyloaded"
+                                    src="../assets/images/dashboard/man.png" alt="header-user">
+                                <div class="dotted-animation"><span class="animate-circle"></span><span
+                                        class="main-circle"></span></div>
+                            </div>
+                            <ul class="profile-dropdown onhover-show-div p-20 profile-dropdown-hover">
+                                <li><a href="#"><i data-feather="user"></i>編輯個人信箱</a></li>
+                                <li><a href="#"><i data-feather="mail"></i>信箱</a></li>
+                                <li><a href="#"><i data-feather="lock"></i>鎖住屏幕</a></li>
+                                <li><a href="#"><i data-feather="settings"></i>設定</a></li>
+                                <li><a href="#"><i data-feather="log-out"></i>登出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="d-lg-none mobile-toggle pull-right"><i data-feather="more-horizontal"></i></div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Ends -->
+
+        <!-- Page Body Start-->
+        <div class="page-body-wrapper">
+
+            <!-- Page Sidebar Start-->
+            <div class="page-sidebar">
+                <div class="main-header-left d-none d-lg-block">
+                    <div class="logo-wrapper"><a href="index.html"><img class="blur-up lazyloaded"
+                                src="../LOGO/豆漿的LOGO01.jpg" height="30%" width="60%" alt=""></a></div>
+                </div>
+                <div class="sidebar custom-scrollbar">
+                    <div class="sidebar-user text-center">
+                        <div><img class="img-60 rounded-circle lazyloaded blur-up"
+                                src="../assets/images/dashboard/man.png" alt="#">
+                        </div>
+                        <h6 class="mt-3 f-14">管理者</h6>
+                        <p>管理層面</p>
+                    </div>
+                    <ul class="sidebar-menu">
+                        <li><a class="sidebar-header" href="index.html"><i data-feather="home"></i><span>管理頁面</span></a>
+                        </li>
+                        <li><a class="sidebar-header" href="#"><i data-feather="box"></i> <span>商品</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <!--
+                                    <li><a href="category.html"><i class="fa fa-circle"></i></a></li>
+                                    -->
+                                <li><a href="index.html"><i class="fa fa-circle"></i>全部商品</a></li>
+                                <li><a href="product-list.html"><i class="fa fa-circle"></i>產品列表</a></li>
+                                <li><a href="product-detail.html"><i class="fa fa-circle"></i>產品信息</a></li>
+                                <li><a href="add-product.html"><i class="fa fa-circle"></i>新增商品</a></li>
+                                <!--
+                            <li>
+                                <a href="#"><i class="fa fa-circle"></i>
+                                    <span>Digital</span> <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                                <ul class="sidebar-submenu">
+                                    <li><a href="category-digital.html"><i class="fa fa-circle"></i>Category</a></li>
+                                    <li><a href="category-digitalsub.html"><i class="fa fa-circle"></i>Sub Category</a></li>
+                                    <li><a href="index.html"><i class="fa fa-circle"></i>Product List</a></li>
+                                    <li><a href="add-digital-product.html"><i class="fa fa-circle"></i>Add Product</a></li>
+                                </ul>
+                            </li>
+                            -->
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-header" href=""><i data-feather="dollar-sign"></i><span>訂單管理</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="order.html"><i class="fa fa-circle"></i>訂單查詢</a></li>
+                                <li><a href="transactions.html"><i class="fa fa-circle"></i>成立訂單明細</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-header" href=""><i data-feather="tag"></i><span>優惠卷</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="coupon-list.html"><i class="fa fa-circle"></i>列出優惠卷</a></li>
+                                <li><a href="coupon-create.html"><i class="fa fa-circle"></i>創建優惠卷</a></li>
+                            </ul>
+                        </li>
+                        <!--
+                    <li><a class="sidebar-header" href="#"><i data-feather="clipboard"></i><span>頁面</span><i class="fa fa-angle-right pull-right"></i></a>
+                        <ul class="sidebar-submenu">
+                            <li><a href="pages-list.html"><i class="fa fa-circle"></i>目前分類</a></li>
+                            <li><a href="page-create.html"><i class="fa fa-circle"></i>創建新分類</a></li>
+                        </ul>
+                    </li>
+                    -->
+                        <li><a class="sidebar-header" href="media.html"><i
+                                    data-feather="camera"></i><span>上傳照片</span></a></li>
+                        <li><a class="sidebar-header" href="#"><i data-feather="align-left"></i><span>列表</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="menu-list.html"><i class="fa fa-circle"></i>列表查詢</a></li>
+                                <li><a href="create-menu.html"><i class="fa fa-circle"></i>創建列表</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-header" href=""><i data-feather="user-plus"></i><span>用戶</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="user-list.html"><i class="fa fa-circle"></i>用戶清單</a></li>
+                                <li><a href="create-user.html"><i class="fa fa-circle"></i>新增用戶</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-header" href=""><i data-feather="users"></i><span>供應商</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="list-vendor.html"><i class="fa fa-circle"></i>供應商名單</a></li>
+                                <li><a href="create-vendors.html"><i class="fa fa-circle"></i>創建供應商</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-header" href=""><i data-feather="chrome"></i><span>小工具</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="translations.html"><i class="fa fa-circle"></i>翻譯</a></li>
+                                <li><a href="currency-rates.html"><i class="fa fa-circle"></i>貨幣即時匯率</a></li>
+                                <li><a href="taxes.html"><i class="fa fa-circle"></i>稅務</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-header" href="reports.html"><i
+                                    data-feather="bar-chart"></i><span>報告</span></a></li>
+                        <li><a class="sidebar-header" href=""><i data-feather="settings"></i><span>設定</span><i
+                                    class="fa fa-angle-right pull-right"></i></a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="profile.html"><i class="fa fa-circle"></i>輪廓</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-header" href="invoice.html"><i
+                                    data-feather="archive"></i><span>發票</span></a>
+                        </li>
+                        <li><a class="sidebar-header" href="login.html"><i data-feather="log-in"></i><span>登入</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Page Sidebar Ends-->
+
+            <!-- Right sidebar Start-->
+            <div class="right-sidebar" id="right_side_bar">
+                <div>
+                    <div class="container p-0">
+                        <div class="modal-header p-l-20 p-r-20">
+                            <div class="col-sm-8 p-0">
+                                <h6 class="modal-title font-weight-bold">客戶名單</h6>
+                            </div>
+                            <div class="col-sm-4 text-end p-0"><i class="me-2" data-feather="settings"></i></div>
+                        </div>
+                    </div>
+                    <div class="friend-list-search mt-0">
+                        <input type="text" placeholder="搜尋客戶"><i class="fa fa-search"></i>
+                    </div>
+                    <div class="p-l-30 p-r-30">
+                        <div class="chat-box">
+                            <div class="people-list friend-list">
+                                <ul class="list">
+                                    <li class="clearfix"><img class="rounded-circle user-image"
+                                            src="../assets/images/dashboard/user.png" alt="">
+                                        <div class="status-circle online"></div>
+                                        <div class="about">
+                                            <div class="name">客戶名稱</div>
+                                            <div class="status"> 上線中</div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix"><img class="rounded-circle user-image"
+                                            src="../assets/images/dashboard/user1.jpg" alt="">
+                                        <div class="status-circle away"></div>
+                                        <div class="about">
+                                            <div class="name">客戶名稱</div>
+                                            <div class="status">幾分鐘前上線</div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix"><img class="rounded-circle user-image"
+                                            src="../assets/images/dashboard/user2.jpg" alt="">
+                                        <div class="status-circle online"></div>
+                                        <div class="about">
+                                            <div class="name">客戶名稱</div>
+                                            <div class="status">上線中</div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix"><img class="rounded-circle user-image"
+                                            src="../assets/images/dashboard/user3.jpg" alt="">
+                                        <div class="status-circle online"></div>
+                                        <div class="about">
+                                            <div class="name">客戶名稱</div>
+                                            <div class="status">上線中</div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix"><img class="rounded-circle user-image"
+                                            src="../assets/images/dashboard/man.png" alt="">
+                                        <div class="status-circle offline"></div>
+                                        <div class="about">
+                                            <div class="name">客戶名稱</div>
+                                            <div class="status">2分鐘前上線</div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix"><img class="rounded-circle user-image"
+                                            src="../assets/images/dashboard/user5.jpg" alt="">
+                                        <div class="status-circle away"></div>
+                                        <div class="about">
+                                            <div class="name">客戶名稱</div>
+                                            <div class="status">幾分鐘前上線</div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix"><img class="rounded-circle user-image"
+                                            src="../assets/images/dashboard/designer.jpg" alt="">
+                                        <div class="status-circle online"></div>
+                                        <div class="about">
+                                            <div class="name">客戶名稱</div>
+                                            <div class="status">上線中</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right sidebar Ends-->
+
+            <div class="page-body">
+
+                <!-- Container-fluid starts-->
+                <div class="container-fluid">
+                    <div class="page-header">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="page-header-left">
+                                    <h3>編輯商品
+                                        <small>商戶後台</small>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <ol class="breadcrumb pull-right">
+                                    <li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item">商戶後台</li>
+                                    <li class="breadcrumb-item active">編輯商品</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Container-fluid Ends-->
+
+                <!-- Container-fluid starts-->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>編輯商品</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row product-adding">
+                                        <div class="col-xl-5">
+                                            <div class="add-product">
+                                                <form action="./php/updatefile.php" method="post"
+                                                    enctype="multipart/form-data">
+                                                    <input class="form-control" id="item_id" type="text"
+                                                        placeholder="請輸入商品名稱" required="" hidden>
+                                                    <div class="row">
+                                                        <div class="pic">
+                                                            <div class="preview">
+                                                                <img src="" id="pic1">
+                                                                <input hidden id="img1" value="" class="word" />
+                                                                <p id="img_1" class="word">封面圖片</p>
+                                                                <p hidden id="img_is_ok1">false</p>
+                                                            </div>
+                                                            <div class="preview">
+                                                                <img src="" id="pic2">
+                                                                <p hidden id="img2" class="word"></p>
+                                                                <p id="img_2" class="word">圖片1</p>
+                                                                <p hidden id="img_is_ok2">false</p>
+                                                            </div>
+                                                            <div class="preview">
+                                                                <img src="" id="pic3">
+                                                                <p hidden id="img3" class="word"></p>
+                                                                <p id="img_2" class="word">圖片2</p>
+                                                                <p hidden id="img_is_ok3">false</p>
+                                                            </div>
+                                                            <hr class="nxt">
+                                                            <div class="preview">
+                                                                <img src="" id="pic4">
+                                                                <p hidden id="img4" class="word"></p>
+                                                                <p id="img_2" class="word">圖片3</p>
+                                                                <p hidden id="img_is_ok4">false</p>
+                                                            </div>
+                                                            <div class="preview">
+                                                                <img src="" id="pic5">
+                                                                <p hidden id="img5" class="word"></p>
+                                                                <p id="img_5" class="word">圖片4</p>
+                                                                <p hidden id="img_is_ok5">false</p>
+                                                            </div>
+                                                            <div class="preview">
+                                                                <img src="" id="pic6">
+                                                                <p hidden id="img6" class="word"></p>
+                                                                <p id="img_6" class="word">圖片5</p>
+                                                                <p hidden id="img_is_ok6">false</p>
+                                                            </div>
+                                                            <hr class="nxt">
+                                                            <div class="preview">
+                                                                <img src="" id="pic7">
+                                                                <p hidden id="img7" class="word"></p>
+                                                                <p id="img_7" class="word">圖片6</p>
+                                                                <p hidden id="img_is_ok7">false</p>
+                                                            </div>
+                                                            <div class="preview">
+                                                                <img src="" id="pic8">
+                                                                <p hidden id="img8" class="word"></p>
+                                                                <p id="img_8" class="word">圖片7</p>
+                                                                <p hidden id="img_is_ok8">false</p>
+                                                            </div>
+                                                            <div class="preview">
+                                                                <img src="" id="pic9">
+                                                                <p hidden id="img9" class="word"></p>
+                                                                <p id="img_9" class="word">圖片8</p>
+                                                                <p hidden id="img_is_ok9">false</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="nxt">
+                                            </div>
+                                            <div class="uploadImage">
+                                                <label for="file" class="btn btn-danger"
+                                                    style="text-align: center;">點選上傳圖片
+                                                    <input type="file" value="上傳檔案" id="file" name="file[]"
+                                                        accept="image/png, image/jpeg, image/gif, image/jpg" multiple
+                                                        style="height: 15pt;" /></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-7">
+                                            <div class="form">
+                                                <div class="form-group mb-3 row">
+                                                    <label for="validationCustom01" class="col-xl-3 col-sm-4 mb-0">商品名稱
+                                                        : </label>
+                                                    <div class="col-xl-8 col-sm-7">
+                                                        <input class="form-control" id="item_name" type="text"
+                                                            placeholder="請輸入商品名稱" required="">
+                                                    </div>
+                                                    <div class="invalid-feedback offset-sm-4 offset-xl-3">Please choose
+                                                        Valid Code.</div>
+                                                </div>
+                                                <div class="form-group mb-3 row">
+                                                    <label for="validationCustom02" class="col-xl-3 col-sm-4 mb-0">商品價錢
+                                                        :</label>
+                                                    <div class="col-2">
+                                                        <span class="input-group-text" id="basic-addon1">NT$</span>
+                                                    </div>
+                                                    <div class="col-xl-6 col-sm-5">
+                                                        <input class="form-control" id="price" type="text"
+                                                            placeholder="請輸入金額(NT$)" required="">
+                                                    </div>
+                                                    <div class="invalid-feedback offset-sm-4 offset-xl-3">Please choose
+                                                        Valid Code.</div>
+                                                </div>
+                                                <div class="form-group mb-3 row">
+                                                    <label for="validationCustomUsername"
+                                                        class="col-xl-3 col-sm-4 mb-0">商品貨號 :</label>
+                                                    <div class="col-xl-8 col-sm-7">
+                                                        <input class="form-control" id="self_num" type="text"
+                                                            placeholder="請輸入自己設定的商品貨號" required="">
+                                                    </div>
+                                                    <div class="invalid-feedback offset-sm-4 offset-xl-3">Please choose
+                                                        Valid Code.</div>
+                                                </div>
+                                                <div class="form-group mb-3 row">
+                                                    <label for="validationCustomUsername"
+                                                        class="col-xl-3 col-sm-4 mb-0">尺寸 :</label>
+                                                    <div class="col-xl-8 col-sm-7">
+                                                        <input class="form-control" id="size" type="text"
+                                                            placeholder="請輸入尺寸(範例:長OO公分X寬OO公分X高OO公分)" required="">
+                                                    </div>
+                                                    <div class="invalid-feedback offset-sm-4 offset-xl-3">Please choose
+                                                        Valid Code.</div>
+                                                </div>
+                                                <div class="form-group mb-3 row">
+                                                    <label for="validationCustomUsername"
+                                                        class="col-xl-3 col-sm-4 mb-0">重量 :</label>
+                                                    <div class="col-xl-8 col-sm-7">
+                                                        <input class="form-control" id="kg" type="text"
+                                                            placeholder="請輸入(需輸入單位)" required="">
+                                                    </div>
+                                                    <div class="invalid-feedback offset-sm-4 offset-xl-3">Please choose
+                                                        Valid Code.</div>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <div class="form-group row">
+                                                    <label for="exampleFormControlSelect1"
+                                                        class="col-xl-3 col-sm-4 mb-0">選擇商品種類 :</label>
+                                                    <div class="col-xl-8 col-sm-7">
+                                                        <select class="form-control digits"
+                                                            id="exampleFormControlSelect1">
+                                                            <option>衣服</option>
+                                                            <option>吊飾</option>
+                                                            <option>生活用品</option>
+                                                            <option>手機周邊</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">每組數量 : </label>
+                                                    <fieldset class="qty-box col-xl-9 col-xl-8 col-sm-7">
+                                                        <div class="input-group">
+                                                            <input class="touchspin" id="group_num" type="text"
+                                                                value="1">
+                                                            <div class="invalid-feedback offset-sm-4 offset-xl-3">Please
+                                                                choose Valid Code.</div>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">最低購買數量 : </label>
+                                                    <fieldset class="qty-box col-xl-9 col-xl-8 col-sm-7">
+                                                        <div class="input-group">
+                                                            <input class="touchspin" id="least" type="text" value="1">
+                                                            <div class="invalid-feedback offset-sm-4 offset-xl-3">Please
+                                                                choose Valid Code.</div>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">總庫存數量 : </label>
+                                                    <fieldset class="qty-box col-xl-9 col-xl-8 col-sm-7">
+                                                        <div class="input-group">
+                                                            <input class="touchspin" id="layup" type="text" value="1">
+                                                            <div class="invalid-feedback offset-sm-4 offset-xl-3">Please
+                                                                choose Valid Code.</div>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-xl-3 col-sm-4">新增敘述 :</label>
+                                                    <textarea id="info" cols="10" rows="4"></textarea>
+                                                </div>
+                                                <hr size="8px" style="color: red; " align="center" width="100%">
+                                                <center>
+                                                    <font color="#888888">
+                                                        <h5><I>寄送方式</I></h5>
+                                                    </font>
+                                                </center>
+                                                <hr size="8px" style="color: red; " align="center" width="100%">
+                                                <div class="form-group mb-3 row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">7-11店到店 : </label>
+                                                    <input class="form-check-input" type="checkbox"
+                                                        onclick="traffic_price1.disabled=!this.checked?true:false"
+                                                        value="">
+                                                    <div class="col-xl-8 col-sm-7">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">運費</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="traffic_price1"
+                                                            placeholder="請輸入運費金額" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-3 row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">全家店到店 : </label>
+                                                    <input class="form-check-input" type="checkbox"
+                                                        onclick="traffic_price2.disabled=!this.checked?true:false"
+                                                        value="">
+                                                    <div class="col-xl-8 col-sm-7">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">運費</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="traffic_price2"
+                                                            placeholder="請輸入運費金額" aria-label="Username"
+                                                            aria-describedby="basic-addon2" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-3 row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">萊爾富店到店 : </label>
+                                                    <input class="form-check-input" type="checkbox"
+                                                        onclick="traffic_price3.disabled=!this.checked?true:false"
+                                                        value="">
+                                                    <div class="col-xl-8 col-sm-7">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">運費</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="traffic_price3"
+                                                            placeholder="請輸入運費金額" aria-label="Username"
+                                                            aria-describedby="basic-addon2" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-3 row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">OK店到店 : </label>
+                                                    <input class="form-check-input" type="checkbox"
+                                                        onclick="traffic_price4.disabled=!this.checked?true:false"
+                                                        value="">
+                                                    <div class="col-xl-8 col-sm-7">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">運費</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="traffic_price4"
+                                                            placeholder="請輸入運費金額" aria-label="Username"
+                                                            aria-describedby="basic-addon2" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-3 row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">黑貓宅急便到府 : </label>
+                                                    <input class="form-check-input" type="checkbox"
+                                                        onclick="traffic_price5.disabled=!this.checked?true:false"
+                                                        value="">
+                                                    <div class="col-xl-8 col-sm-7">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">運費</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="traffic_price5"
+                                                            placeholder="請輸入運費金額" aria-label="Username"
+                                                            aria-describedby="basic-addon2" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-3 row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">新竹物流到府 : </label>
+                                                    <input class="form-check-input" type="checkbox"
+                                                        onclick="traffic_price6.disabled=!this.checked?true:false"
+                                                        value="">
+                                                    <div class="col-xl-8 col-sm-7">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">運費</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="traffic_price6"
+                                                            placeholder="請輸入運費金額" aria-label="Username"
+                                                            aria-describedby="basic-addon2" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-3 row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">嘉里大榮物流到府 : </label>
+                                                    <input class="form-check-input" type="checkbox"
+                                                        onclick="traffic_price7.disabled=!this.checked?true:false"
+                                                        value="">
+                                                    <div class="col-xl-8 col-sm-7">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">運費</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="traffic_price7"
+                                                            placeholder="請輸入運費金額" aria-label="Username"
+                                                            aria-describedby="basic-addon2" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-3 row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">郵局郵寄到府 : </label>
+                                                    <input class="form-check-input" type="checkbox"
+                                                        onclick="traffic_price8.disabled=!this.checked?true:false"
+                                                        value="">
+                                                    <div class="col-xl-8 col-sm-7">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">運費</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="traffic_price8"
+                                                            placeholder="請輸入運費金額" aria-label="Username"
+                                                            aria-describedby="basic-addon2" disabled>
+                                                    </div>
+                                                </div>
+                                                <hr size="8px" style="color: red;" width="100%">
+                                                <font color="#888888" style="text-align: center;">
+                                                    <h5><I>接受支付方式</I></h5>
+                                                </font>
+                                                <hr size="8px" style="color: red;" width="100%">
+                                                <div class="form-group mb-3 row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">信用卡支付 : </label>
+                                                    <input class="form-check-input" type="checkbox" id="pay_yn1"
+                                                        value="0">
+
+                                                </div>
+                                                <div class="form-group mb-3 row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">金融卡支付 : </label>
+                                                    <input class="form-check-input" type="checkbox" id="pay_yn2"
+                                                        value="0">
+
+                                                </div>
+                                                <div class="form-group mb-3 row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">超商條碼支付 : </label>
+                                                    <input class="form-check-input" type="checkbox" id="pay_yn3"
+                                                        value="0">
+
+                                                </div>
+                                                <div class="form-group mb-3 row">
+                                                    <label class="col-xl-3 col-sm-4 mb-0">銀行匯款支付 : </label>
+                                                    <input class="form-check-input" type="checkbox" id="pay_yn4"
+                                                        value="0">
+
+                                                </div>
+                                            </div>
+                                            <div class="offset-xl-3 offset-sm-4">
+                                                <button type="submit" class="btn btn-primary" id="del">取消</button>
+                                                <button type="submit" class="btn btn-primary" id="editdate"
+                                                    value="OK">更新</button>
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Container-fluid Ends-->
+
+            </div>
+
+            <!-- footer start-->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 footer-copyright">
+                            <p><i class="fa fa-copyright" aria-hidden="true"></i> 2022 HJShopMall商城-閎捷科技有限公司，保留所有權利！
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="pull-right mb-0"><i class="fa fa-heart"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer end-->
+
+        </div>
+
+    </div>
+
+
+    <!-- latest jquery-->
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        //測試Get
+        //先取得網址字串，假設此頁網址為「index.aspx?id=U001&name=GQSM」
+        var url = location.href;
+        //url.decode( "chinese string" , "UTF-8" );
+        //再來用去尋找網址列中是否有資料傳遞(QueryString)
+        if (url.indexOf('?') != -1) {
+            var id = "";
+            //在此直接將各自的參數資料切割放進ary中
+            var ary = url.split('?')[1].split('&');
+            //此時ary的內容為：
+            //ary[0] = 'id=U001'，ary[1] = 'name=GQSM'
+            //下迴圈去搜尋每個資料參數
+            for (i = 0; i <= ary.length - 1; i++) {
+                //如果資料名稱為id的話那就把他取出來
+                if (ary[i].split('=')[0] == 'id') {
+                    id = ary[i].split('=')[1];
+                    //alert("id:" + id);
+                }
+            }
+        }
+        $(function () {
+            load();
+        });
+
+        function load() {
+            //alert("進入Load Function");
+            $.ajax({
+                type: 'post',
+                url: '/HJShop/back-end/php/iLoaditem.php',
+                dataType: 'json',
+                data: {
+                    'id': 1
+                },
+                success: function (data) {
+                    //alert(JSON.stringify(data[0]));
+                    //var MyArray = data.split(',');
+                    console.log(JSON.stringify(data));
+                    //alert(data.length);
+                    //alert('item_name'+(0+1));
+                    //alert(data[0].item_name);
+                    //alert(data[0].pic1);
+                    var ids = id - 1;
+                    //alert(item_id);
+                    i = ids; {
+                        document.getElementById('item_id').value = data[i].item_id;
+                        document.getElementById('pic1').src = "../upload/item_pics/" + data[i].pic1;
+                        document.getElementById('img1').value = data[i].pic1;
+                        document.getElementById('pic2').src = "../upload/item_pics/" + data[i].pic2;
+                        document.getElementById('img2').value = data[i].pic2;
+                        document.getElementById('pic3').src = "../upload/item_pics/" + data[i].pic3;
+                        document.getElementById('img3').value = data[i].pic3;
+                        document.getElementById('pic4').src = "../upload/item_pics/" + data[i].pic4;
+                        document.getElementById('img4').value = data[i].pic4;
+                        document.getElementById('pic5').src = "../upload/item_pics/" + data[i].pic5;
+                        document.getElementById('img5').value = data[i].pic5;
+                        document.getElementById('pic6').src = "../upload/item_pics/" + data[i].pic6;
+                        document.getElementById('img6').value = data[i].pic6;
+                        document.getElementById('pic7').src = "../upload/item_pics/" + data[i].pic7;
+                        document.getElementById('img7').value = data[i].pic7;
+                        document.getElementById('pic8').src = "../upload/item_pics/" + data[i].pic8;
+                        document.getElementById('img8').value = data[i].pic8;
+                        document.getElementById('pic9').src = "../upload/item_pics/" + data[i].pic9;
+                        document.getElementById('img9').value = data[i].pic9;
+                        document.getElementById('item_name').value = data[i].item_name;
+                        document.getElementById('price').value = data[i].price;
+                        document.getElementById('self_num').value = data[i].self_num;
+                        document.getElementById('size').value = data[i].size;
+                        document.getElementById('kg').value = data[i].kg;
+                        document.getElementById('group_num').value = data[i].group_num;
+                        document.getElementById('least').value = data[i].least;
+                        document.getElementById('layup').value = data[i].layup;
+                        document.getElementById('info').value = data[i].info;
+                        document.getElementById('traffic_price1').value = data[i].traffic_price1;
+                        document.getElementById('traffic_price2').value = data[i].traffic_price2;
+                        document.getElementById('traffic_price3').value = data[i].traffic_price3;
+                        document.getElementById('traffic_price4').value = data[i].traffic_price4;
+                        document.getElementById('traffic_price5').value = data[i].traffic_price5;
+                        document.getElementById('traffic_price6').value = data[i].traffic_price6;
+                        document.getElementById('traffic_price7').value = data[i].traffic_price7;
+                        document.getElementById('traffic_price8').value = data[i].traffic_price8;
+                        document.getElementById('pay_yn1').value = data[i].pay_yn1;
+                        document.getElementById('pay_yn2').value = data[i].pay_yn2;
+                        document.getElementById('pay_yn3').value = data[i].pay_yn3;
+                        document.getElementById('pay_yn4').value = data[i].pay_yn4;
+                    }
+                    if ($("#pay_yn1").val() == 1) {
+                        $("#pay_yn1").prop('checked', true);
+                    }
+                    if ($("#pay_yn2").val() == 1) {
+                        $("#pay_yn2").prop('checked', true);
+                    }
+                    if ($("#pay_yn3").val() == 1) {
+                        $("#pay_yn3").prop('checked', true);
+                    }
+                    if ($("#pay_yn4").val() == 1) {
+                        $("#pay_yn4").prop('checked', true);
+                    }
+                },
+                error: function (data) {
+                    alert("you are bad")
+                }
+            });
+        }
+
+
+        $('#editdate').click(function () {
+            up()
+        })
+        function up() {
+
+            var contacts = "";
+            /*
+            var a = document.getElementById('pic1');
+            var b = a.src;
+            alert(b.substring(71, 199))
+            var pic1 = document.getElementById('pic1').innerText;
+            */
+            var pic1 = document.getElementById('img1').value;
+            var pic2 = document.getElementById('img2').value;
+            var pic3 = document.getElementById('img3').value;
+            var pic4 = document.getElementById('img4').value;
+            var pic5 = document.getElementById('img5').value;
+            var pic6 = document.getElementById('img6').value;
+            var pic7 = document.getElementById('img7').value;
+            var pic8 = document.getElementById('img8').value;
+            var pic9 = document.getElementById('img9').value;
+            var item_name = document.getElementById('item_name');
+            var price = document.getElementById('price');
+            var self_num = document.getElementById('self_num');
+            var size = document.getElementById('size');
+            var kg = document.getElementById('kg');
+            var group_num = document.getElementById('group_num');
+            var least = document.getElementById('least');
+            var layup = document.getElementById('layup');
+            var info = document.getElementById('info');
+            var traffic_price1 = document.getElementById('traffic_price1');
+            var traffic_price2 = document.getElementById('traffic_price2');
+            var traffic_price3 = document.getElementById('traffic_price3');
+            var traffic_price4 = document.getElementById('traffic_price4');
+            var traffic_price5 = document.getElementById('traffic_price5');
+            var traffic_price6 = document.getElementById('traffic_price6');
+            var traffic_price7 = document.getElementById('traffic_price7');
+            var traffic_price8 = document.getElementById('traffic_price8');
+            var pay_yn1 = document.getElementById('pay_yn1');
+            var pay_yn2 = document.getElementById('pay_yn2');
+            var pay_yn3 = document.getElementById('pay_yn3');
+            var pay_yn4 = document.getElementById('pay_yn4');
+
+            contacts = pic1 + "^" + pic2 + "^" + pic3 + "^" + pic4 + "^" + pic5 + "^" + pic6 + "^" + pic7 + "^" + pic8 + "^" + pic9 + "^" + item_name.value + "^" + price.value + "^" + self_num.value + "^" + size.value + "^" + kg.value + "^" + group_num.value + "^" + least.value + "^" + layup.value + "^" + info.value + "^" + traffic_price1.value + "^" + traffic_price2.value + "^" + traffic_price3.value + "^" + traffic_price4.value + "^" + traffic_price5.value + "^" + traffic_price6.value + "^" + traffic_price7.value + "^" + traffic_price8.value + "^" + pay_yn1.value + "^" + pay_yn2.value + "^" + pay_yn3.value + "^" + pay_yn4.value;
+
+
+            // alert(contacts)
+            $.post("./php/iEdititem.php", { id: document.getElementById('item_id').value, con: contacts });
+            alert("更新完成");
+        }
+
+
+        /*
+        function Action(){
+        var info = document.getElementById('info').value;
+        $.post("/save_info.php", { id:1, con:info } );
+        }
+        */
+
+
+    </script>
+    <script type="text/javascript">
+        //上傳圖片確認
+        var hasUploadedOne = false;// 已上傳過1張圖片
+        var hasUploadedTwo = false;// 已上传过2张图片
+        var hasUploadedthree = false;// 已上传过3张图片
+        var hasUploadedfour = false;// 已上传过4张图片
+        var hasUploadedfive = false;// 已上传过5张图片
+        var hasUploadedsix = false;// 已上传过6张图片
+        var hasUploadedseven = false;// 已上传过7张图片
+        var hasUploadedeight = false;// 已上传过8张图片
+        var hasUploadednine = false;// 已上传过9张图片
+
+        //獲取到預覽框
+        var imgObjPreview1 = document.getElementById("pic1");
+        var imgObjPreview2 = document.getElementById("pic2");
+        var imgObjPreview3 = document.getElementById("pic3");
+        var imgObjPreview4 = document.getElementById("pic4");
+        var imgObjPreview5 = document.getElementById("pic5");
+        var imgObjPreview6 = document.getElementById("pic6");
+        var imgObjPreview7 = document.getElementById("pic7");
+        var imgObjPreview8 = document.getElementById("pic8");
+        var imgObjPreview9 = document.getElementById("pic9");
+
+
+        document.getElementById('file').onchange = function () {
+            // 若還沒完成9張圖片的上傳
+            if ($("#img_is_ok9").text() == 'false') {
+                //獲取到file的檔案
+                var docObj = this;
+                //獲取到檔名和型別（非IE，可一次上傳1張或多張）
+                if (docObj.files) {
+                    var i = 0;
+                    while (docObj.files[i]) {
+                        if ($("#img_is_ok1").text() == 'false') {
+                            imgObjPreview1.src = window.URL.createObjectURL(docObj.files[i]);
+                            $("#img1").val(docObj.files[i].name);
+                            $("#img_is_ok1").text('true');
+                            i++;
+                            continue;
+                        }
+                        if ($("#img_is_ok2").text() == 'false') {
+                            imgObjPreview2.src = window.URL.createObjectURL(docObj.files[i]);
+                            $("#img2").val(docObj.files[i].name);
+                            $("#img_is_ok2").text('true');
+                            i++;
+                            continue;
+                        }
+                        if ($("#img_is_ok3").text() == 'false') {
+                            imgObjPreview3.src = window.URL.createObjectURL(docObj.files[i]);
+                            $("#img3").val(docObj.files[i].name);
+                            $("#img_is_ok3").text('true');
+                            i++;
+                            continue;
+                        }
+                        if ($("#img_is_ok4").text() == 'false') {
+                            imgObjPreview4.src = window.URL.createObjectURL(docObj.files[i]);
+                            $("#img4").val(docObj.files[i].name);
+                            $("#img_is_ok4").text('true');
+                            i++;
+                            continue;
+                        }
+                        if ($("#img_is_ok5").text() == 'false') {
+                            imgObjPreview5.src = window.URL.createObjectURL(docObj.files[i]);
+                            $("#img5").val(docObj.files[i].name);
+                            $("#img_is_ok5").text('true');
+                            i++;
+                            continue;
+                        }
+                        if ($("#img_is_ok6").text() == 'false') {
+                            imgObjPreview6.src = window.URL.createObjectURL(docObj.files[i]);
+                            $("#img6").val(docObj.files[i].name);
+                            $("#img_is_ok6").text('true');
+                            i++;
+                            continue;
+                        }
+                        if ($("#img_is_ok7").text() == 'false') {
+                            imgObjPreview7.src = window.URL.createObjectURL(docObj.files[i]);
+                            $("#img7").val(docObj.files[i].name);
+                            $("#img_is_ok7").text('true');
+                            i++;
+                            continue;
+                        }
+                        if ($("#img_is_ok8").text() == 'false') {
+                            imgObjPreview8.src = window.URL.createObjectURL(docObj.files[i]);
+                            $("#img8").val(docObj.files[i].name);
+                            $("#img_is_ok8").text('true');
+                            i++;
+                            continue;
+                        }
+                        if ($("#img_is_ok9").text() == 'false') {
+                            imgObjPreview9.src = window.URL.createObjectURL(docObj.files[i]);
+                            $("#img9").val(docObj.files[i].name);
+                            $("#img_is_ok9").text('true');
+                            i++;
+                            stop;
+                        }
+                    }
+                }
+                //IE（只能一次上傳1張）
+                else {
+                    //使用濾鏡
+                    docObj.select();
+                    var imgSrc = document.selection.createRange().text;
+                    // 這是上傳的第一張照片
+                    if (!hasUploadedOne) {
+                        imgObjPreview1.src = imgSrc;
+                        hasUploadedOne = true;
+                    }
+                    // 這是上傳的第二張照片
+                    else {
+                        imgObjPreview2.src = imgSrc;
+                        hasUploadedTwo = true;
+                    }
+                    document.selection.empty();
+                }
+                return true;
+            }
+        }
+    </script>
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- feather icon js-->
+    <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+
+    <!-- Sidebar jquery-->
+    <script src="../assets/js/sidebar-menu.js"></script>
+
+    <!-- touchspin js-->
+    <script src="../assets/js/touchspin/vendors.min.js"></script>
+    <script src="../assets/js/touchspin/touchspin.js"></script>
+    <script src="../assets/js/touchspin/input-groups.min.js"></script>
+
+    <!-- form validation js-->
+    <script src="../assets/js/dashboard/form-validation-custom.js"></script>
+
+    <!-- ckeditor js-->
+    <script src="../assets/js/editor/ckeditor/ckeditor.js"></script>
+    <script src="../assets/js/editor/ckeditor/styles.js"></script>
+    <script src="../assets/js/editor/ckeditor/adapters/jquery.js"></script>
+    <script src="../assets/js/editor/ckeditor/ckeditor.custom.js"></script>
+
+    <!-- Zoom js-->
+    <script src="../assets/js/jquery.elevatezoom.js"></script>
+    <script src="../assets/js/zoom-scripts.js"></script>
+
+    <!--Customizer admin-->
+    <script src="../assets/js/admin-customizer.js"></script>
+
+    <!-- lazyload js-->
+    <script src="../assets/js/lazysizes.min.js"></script>
+
+    <!--right sidebar js-->
+    <script src="../assets/js/chat-menu.js"></script>
+
+    <!--script admin-->
+    <script src="../assets/js/admin-script.js"></script>
+
+
+
+</body>
+
+</html>

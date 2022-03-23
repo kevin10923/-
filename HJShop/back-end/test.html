@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="../assets/js/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#addevent_1").hide();
+    })
+    function show_1() {
+        $("#aaa").append('<div> 商品選項名稱 <input type="text" id="Product_specifications1" placeholder="輸入規格名稱，例如：顏色" /></div>')
+        var number1 = document.getElementById('id_use_1').value;
+        $("#aaa").append('<div> 選項 <input type="text" id="Specification1_' + number1 + '" placeholder="輸入規格選項，例如：紅色" /> <i></div>')
+        $("#bbb").remove();
+        $("#addevent_1").show();
+        document.getElementById('id_use_1').value = parseInt(number1) + 1;
+    }
+    function add_1() {
+        var number1 = document.getElementById('id_use_1').value;
+        $("#aaa").append('<div> 選項 <input type="text" id="Specification1_' + number1 + '" placeholder="輸入規格選項，例如白色" /></div>');
+        document.getElementById('id_use_1').value = parseInt(number1) + 1;
+    }
+    $(document).ready(function () {
+        $("#addevent_2").hide();
+    })
+    function show_2() {
+        $("#ccc").append('<div> 商品選項名稱 <input type="text" id="Product_specifications2" placeholder="輸入規格名稱，例如：顏色" /></div>')
+        var number2 = document.getElementById('id_use_2').value;
+        $("#ccc").append('<div> 選項 <input type="text" id="Specification2_' + number2 + '" placeholder="輸入規格選項，例如：紅色" /> <i></div>')
+        $("#ddd").remove();
+        $("#addevent_2").show();
+        document.getElementById('id_use_2').value = parseInt(number2) + 1;
+    }
+    function add_2() {
+        var number2 = document.getElementById('id_use_2').value;
+        $("#ccc").append('<div> 選項 <input type="text" id="Specification2_' + number2 + '" placeholder="輸入規格選項，例如白色" /></div>');
+        document.getElementById('id_use_2').value = parseInt(number2) + 1;
+    }
+</script>
+
+<body>
+    <div id="aaa">
+        <div id="bbb"><input type="button" onclick="show_1()" value="新增規格選項" /></div>
+        <input hidden id="id_use_1" value="1" />
+    </div>
+    <div>
+        <input id="addevent_1" onclick="add_1()" type="button" value="新增" />
+    </div>
+    <div id="ccc">
+        <div id="ddd"><input type="button" onclick="show_2()" value="新增規格選項" /></div>
+        <input hidden id="id_use_2" value="1" />
+    </div>
+    <div>
+        <input id="addevent_2" onclick="add_2()" type="button" value="新增" />
+    </div>
+</body>
+
+</html>

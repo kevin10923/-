@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script>
+        function add(n) {
+            $("#abc").remove();
+            $("#aaa").append('<tr><td>商品規格</td><td><input type="text" placeholder="輸入規格選項" /></td></tr><input id="abc" type="button" onclick="add(' + n + 1 + ')" value="增加規格選項" />')
+        }
+    </script>
+
+<body>
+    <div>
+        <table id="aaa">
+            <tr>
+                <td>商品規格</td>
+                <td><input type="text" placeholder="輸入規格選項" /></td>
+            </tr>
+            <input id="abc" type="button" onclick="add(1)" value="增加規格選項" />
+        </table>
+    </div>
+</body>
+
+</html>
